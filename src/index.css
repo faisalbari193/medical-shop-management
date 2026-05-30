@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Clean Minimalism Color System Mapping */
+  --color-slate-950: #f8fafc; /* Canvas background / off-white */
+  --color-slate-900: #ffffff; /* Card and container surfaces / clean white */
+  --color-slate-850: #f1f5f9; /* Extra soft backgrounds & dynamic dividers */
+  --color-slate-800: #e2e8f0; /* Default structural card borders */
+  --color-slate-700: #cbd5e1; /* Midtone borders & lines */
+  --color-slate-600: #64748b; /* Cool grey text / secondary metadata fields */
+  --color-slate-500: #475569; /* Bold grey text / secondary text titles */
+  --color-slate-400: #334155; /* Neutral content colors */
+  --color-slate-300: #1e293b; /* Heavy text / deep content captions */
+  --color-slate-200: #0f172a; /* Main body typography - Charcoal */
+  --color-slate-100: #090d16; /* Clean rich headings / titles */
+  --color-slate-50: #020617;  /* High contrast accents */
+
+  /* Surgical Medical Accent Palette (Modern Teal-Green) */
+  --color-emerald-950: #f0fdf4; /* Pure light emerald banner background */
+  --color-emerald-900: #dcfce7; /* Soft alert/toast backgrounds */
+  --color-emerald-800: #166534; /* Success labels */
+  --color-emerald-700: #15803d; 
+  --color-emerald-600: #0d9488; /* Primary buttons / interactive markers */
+  --color-emerald-500: #14b8a6; /* Bright hover effects and indicators */
+  --color-emerald-400: #0d9488; /* Success labels / highlights */
+}
+
+/* Base styling enhancements */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-slate-950);
+  color: var(--color-slate-200);
+}
+
+/* Redefine button shadow rings for clean light aesthetics */
+.shadow-emerald-950 {
+  --tw-shadow-color: rgba(13, 148, 136, 0.08) !important;
+}
+
+/* Soft minimal shadows */
+.shadow-xl, .shadow-2xl {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03), 0 2px 10px -1px rgba(15, 23, 42, 0.02) !important;
+}
+
+/* Fine-tune scrollbar styles for beautiful minimal bento cells */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-slate-950);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-800);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-slate-700);
+}
+
+/* Fix global contrast rules for interactive elements inside primary accent panels */
+button.bg-emerald-600, 
+button.bg-emerald-500,
+label.bg-emerald-600,
+span.bg-emerald-600,
+div.bg-emerald-600,
+.bg-emerald-600 *,
+.bg-emerald-500 *,
+.bg-emerald-600 {
+  text-shadow: none !important;
+}
+
+/* Ensure white text is retained on primary elements */
+.bg-emerald-600, .bg-emerald-500, .bg-emerald-700, .bg-indigo-600, .bg-rose-500, .bg-rose-600,
+.bg-emerald-600 *, .bg-emerald-500 *, .bg-emerald-700 *, .bg-indigo-600 *, .bg-rose-500 *, .bg-rose-600 * {
+  color: #ffffff !important;
+}
+
+/* Retain high-contrast white on gradient buttons */
+.bg-gradient-to-r, .bg-gradient-to-r * {
+  color: #ffffff !important;
+}
+
+/* Remap standard text-white to dark charcoal for text headings on white cards, except inside button elements */
+.text-white:not(button *):not(button):not(.bg-emerald-600 *):not(.bg-emerald-500 *):not(.bg-emerald-700 *):not(.bg-indigo-600 *):not(.bg-indigo-600):not(.bg-rose-500 *):not(.bg-rose-500) {
+  color: var(--color-slate-100) !important;
+}
+
+/* Remap hover interactions */
+.hover\:text-white:hover {
+  color: var(--color-slate-100) !important;
+}
+
+/* Fine-tuned print receipt styling layouts */
+#invoice_print_area, #invoice_print_area * {
+  color: #000000 !important;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #invoice_print_area, #invoice_print_area * {
+    visibility: visible;
+  }
+  #invoice_print_area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 320px; /* Thermal paper simulation */
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 10px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.4;
+    font-family: "Courier New", Courier, monospace !important;
+  }
+  /* Force dark colors for printing standard indicators */
+  #invoice_print_area * {
+    color: #000000 !important;
+  }
+}
+
+/* Smooth micro-interaction transitions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Medical Shop Management",
+  "description": "Bangladesh Pharmacy POS & Inventory system with Gemini-powered DGDA Medicine API Lookup, stock tracking, POS billing, invoicing, and reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

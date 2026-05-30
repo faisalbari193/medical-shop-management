@@ -1,0 +1,318 @@
+{
+  "medicines": [
+    {
+      "id": "med_1",
+      "name": "Napa",
+      "generic_name": "Paracetamol",
+      "brand": "Napa",
+      "manufacturer": "Square Pharmaceuticals Ltd.",
+      "category": "Pain Relief",
+      "dosage_form": "Tablet",
+      "strength": "500 mg",
+      "price": 1.5,
+      "stock_quantity": 1200,
+      "expiry_date": "2027-10-31",
+      "batch_number": "NP-88301",
+      "description": "Standard paracetamol for fever and pain relief."
+    },
+    {
+      "id": "med_2",
+      "name": "Sergel 20",
+      "generic_name": "Esomeprazole",
+      "brand": "Sergel",
+      "manufacturer": "Healthcare Pharmaceuticals Ltd.",
+      "category": "Gastric & Acidity",
+      "dosage_form": "Capsule",
+      "strength": "20 mg",
+      "price": 7.0,
+      "stock_quantity": 480,
+      "expiry_date": "2027-05-15",
+      "batch_number": "SG-44902",
+      "description": "Proton pump inhibitor for hyperacidity and ulcers."
+    },
+    {
+      "id": "med_3",
+      "name": "Maxpro 20",
+      "generic_name": "Esomeprazole",
+      "brand": "Maxpro",
+      "manufacturer": "Incepta Pharmaceuticals Ltd.",
+      "category": "Gastric & Acidity",
+      "dosage_form": "Tablet",
+      "strength": "20 mg",
+      "price": 8.0,
+      "stock_quantity": 12,
+      "expiry_date": "2026-06-15",
+      "batch_number": "MX-11029",
+      "description": "Acidity regulator tablet."
+    },
+    {
+      "id": "med_4",
+      "name": "Napa Extend",
+      "generic_name": "Paracetamol",
+      "brand": "Napa",
+      "manufacturer": "Square Pharmaceuticals Ltd.",
+      "category": "Pain Relief",
+      "dosage_form": "Tablet",
+      "strength": "665 mg",
+      "price": 2.5,
+      "stock_quantity": 90,
+      "expiry_date": "2026-06-02",
+      "batch_number": "NX-332",
+      "description": "Extended release formulation for joint and muscle pain."
+    },
+    {
+      "id": "med_5",
+      "name": "Azithrocin 500",
+      "generic_name": "Azithromycin",
+      "brand": "Azithrocin",
+      "manufacturer": "Beximco Pharmaceuticals Ltd.",
+      "category": "Antibiotics",
+      "dosage_form": "Tablet",
+      "strength": "500 mg",
+      "price": 35.0,
+      "stock_quantity": 150,
+      "expiry_date": "2027-12-25",
+      "batch_number": "AZ-8902",
+      "description": "Broad-spectrum macrolide antibiotic."
+    },
+    {
+      "id": "med_6",
+      "name": "Monas 10",
+      "generic_name": "Montelukast",
+      "brand": "Monas",
+      "manufacturer": "ACI Limited",
+      "category": "Asthma & Allergy",
+      "dosage_form": "Tablet",
+      "strength": "10 mg",
+      "price": 16.0,
+      "stock_quantity": 320,
+      "expiry_date": "2027-02-28",
+      "batch_number": "MN-449",
+      "description": "Leukotriene receptor antagonist for asthma control."
+    },
+    {
+      "id": "med_7",
+      "name": "Seclo 20",
+      "generic_name": "Omeprazole",
+      "brand": "Seclo",
+      "manufacturer": "Square Pharmaceuticals Ltd.",
+      "category": "Gastric & Acidity",
+      "dosage_form": "Capsule",
+      "strength": "20 mg",
+      "price": 6.0,
+      "stock_quantity": 0,
+      "expiry_date": "2026-02-10",
+      "batch_number": "SC-1029",
+      "description": "Standard Omeprazole capsules for acid control."
+    },
+    {
+      "id": "med_8",
+      "name": "Ace Plus",
+      "generic_name": "Paracetamol + Caffeine",
+      "brand": "Ace",
+      "manufacturer": "Square Pharmaceuticals Ltd.",
+      "category": "Pain Relief",
+      "dosage_form": "Tablet",
+      "strength": "500 mg + 65 mg",
+      "price": 3.0,
+      "stock_quantity": 250,
+      "expiry_date": "2025-12-15",
+      "batch_number": "AP-776",
+      "description": "Paracetamol with caffeine for fast headache relief."
+    },
+    {
+      "id": "med_9",
+      "name": "Osartil 50",
+      "generic_name": "Losartan Potassium",
+      "brand": "Osartil",
+      "manufacturer": "Incepta Pharmaceuticals Ltd.",
+      "category": "Cardiovascular",
+      "dosage_form": "Tablet",
+      "strength": "50 mg",
+      "price": 10.0,
+      "stock_quantity": 180,
+      "expiry_date": "2027-11-20",
+      "batch_number": "OS-5542",
+      "description": "Angiotensin II receptor blocker for hypertension."
+    },
+    {
+      "id": "med_10",
+      "name": "Secrin 2",
+      "generic_name": "Glimepiride",
+      "brand": "Secrin",
+      "manufacturer": "Incepta Pharmaceuticals Ltd.",
+      "category": "Diabetes Care",
+      "dosage_form": "Tablet",
+      "strength": "2 mg",
+      "price": 12.0,
+      "stock_quantity": 220,
+      "expiry_date": "2027-09-18",
+      "batch_number": "SR-9031",
+      "description": "Oral sulfonylurea hypoglycemic drug for Type 2 diabetes."
+    }
+  ],
+  "categories": [
+    "Pain Relief",
+    "Gastric & Acidity",
+    "Antibiotics",
+    "Asthma & Allergy",
+    "Cardiovascular",
+    "Diabetes Care",
+    "Ophthalmology",
+    "Cough & Cold",
+    "Vitamins & Supplements",
+    "Others"
+  ],
+  "customers": [
+    {
+      "id": "cust_1",
+      "name": "Mr. Jahangir Alam",
+      "phone": "01712345678",
+      "total_spending": 2350.0,
+      "purchase_count": 8,
+      "last_purchase_date": "2026-05-29"
+    },
+    {
+      "id": "cust_2",
+      "name": "Mrs. Tasnim Rahman",
+      "phone": "01898765432",
+      "total_spending": 890.0,
+      "purchase_count": 3,
+      "last_purchase_date": "2026-05-28"
+    },
+    {
+      "id": "cust_3",
+      "name": "Dr. Abdur Rahim",
+      "phone": "01521443322",
+      "total_spending": 5600.0,
+      "purchase_count": 12,
+      "last_purchase_date": "2026-05-30"
+    },
+    {
+      "id": "cust_4",
+      "name": "Rahat Ahmed",
+      "phone": "01911223344",
+      "total_spending": 120.0,
+      "purchase_count": 1,
+      "last_purchase_date": "2026-05-12"
+    }
+  ],
+  "sales": [
+    {
+      "id": "sale_1",
+      "customer_name": "Mr. Jahangir Alam",
+      "customer_phone": "01712345678",
+      "customer_id": "cust_1",
+      "subtotal": 120.0,
+      "discount": 10.0,
+      "total": 110.0,
+      "payment_method": "Cash",
+      "timestamp": "2026-05-10T14:30:00Z",
+      "items": [
+        {
+          "medicine_id": "med_1",
+          "name": "Napa",
+          "price": 1.5,
+          "quantity": 20,
+          "item_total": 30.0
+        },
+        {
+          "medicine_id": "med_5",
+          "name": "Azithrocin 500",
+          "price": 35.0,
+          "quantity": 2,
+          "item_total": 70.0
+        },
+        {
+          "medicine_id": "med_6",
+          "name": "Monas 10",
+          "price": 16.0,
+          "quantity": 1,
+          "item_total": 16.0
+        }
+      ]
+    },
+    {
+      "id": "sale_2",
+      "customer_name": "Mrs. Tasnim Rahman",
+      "customer_phone": "01898765432",
+      "customer_id": "cust_2",
+      "subtotal": 280.0,
+      "discount": 0.0,
+      "total": 280.0,
+      "payment_method": "bKash",
+      "timestamp": "2026-05-28T16:15:00Z",
+      "items": [
+        {
+          "medicine_id": "med_2",
+          "name": "Sergel 20",
+          "price": 7.0,
+          "quantity": 40,
+          "item_total": 280.0
+        }
+      ]
+    },
+    {
+      "id": "sale_3",
+      "customer_name": "Dr. Abdur Rahim",
+      "customer_phone": "01521443322",
+      "customer_id": "cust_3",
+      "subtotal": 750.0,
+      "discount": 50.0,
+      "total": 700.0,
+      "payment_method": "Card",
+      "timestamp": "2026-05-30T09:40:00Z",
+      "items": [
+        {
+          "medicine_id": "med_5",
+          "name": "Azithrocin 500",
+          "price": 35.0,
+          "quantity": 20,
+          "item_total": 700.0
+        },
+        {
+          "medicine_id": "med_1",
+          "name": "Napa",
+          "price": 1.5,
+          "quantity": 30,
+          "item_total": 45.0
+        }
+      ]
+    }
+  ],
+  "stock_logs": [
+    {
+      "id": "log_1",
+      "medicine_id": "med_1",
+      "medicine_name": "Napa",
+      "type": "Stock In",
+      "quantity": 1000,
+      "previous_stock": 200,
+      "new_stock": 1200,
+      "timestamp": "2026-05-01T08:00:00Z",
+      "remarks": "Procured from Square Distributor"
+    },
+    {
+      "id": "log_2",
+      "medicine_id": "med_1",
+      "medicine_name": "Napa",
+      "type": "Stock Out",
+      "quantity": 20,
+      "previous_stock": 1200,
+      "new_stock": 1180,
+      "timestamp": "2026-05-10T14:30:00Z",
+      "remarks": "POS Sale (Invoice sale_1)"
+    },
+    {
+      "id": "log_3",
+      "medicine_id": "med_5",
+      "medicine_name": "Azithrocin 500",
+      "type": "Stock Out",
+      "quantity": 20,
+      "previous_stock": 170,
+      "new_stock": 150,
+      "timestamp": "2026-05-30T09:40:00Z",
+      "remarks": "POS Sale (Invoice sale_3)"
+    }
+  ]
+}
