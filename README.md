@@ -81,15 +81,6 @@ The system uses an **Express JSON database engine** (`database.json`) as a stabl
 ```bash
 npm install
 ```
-
-### 2. Configure Environment variables
-Create a `.env` file referencing `.env.example`:
-```env
-GEMINI_API_KEY="your-gemini-key"
-ADMIN_USERNAME="admin"
-ADMIN_PASSWORD="123456"
-```
-
 ### 3. Launch Development Server
 ```bash
 npm run dev
