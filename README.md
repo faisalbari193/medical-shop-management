@@ -63,20 +63,7 @@ A modern, production-ready pharmacy POS and inventory management system designed
 │   │   ├── StockLogs.jsx        # Audit trails showing stock fluctuations
 │   │   ├── Settings.jsx         # Custom VAT tax parameters and shop header config
 ```
-
 ---
-
-## 🔒 Security & Session Safeguards
-
-- Authorized sessions are handled via custom token parameters checking headers:
-  `Authorization: Bearer <token>`
-- Administrative credentials default matches specified parameters in project env files:
-  - **Username**: `admin`
-  - **Password**: `123456`
-- System blocks unauthorized access to crucial stock controls, sales transactions, and administrative configuration panels!
-
----
-
 ## 🛢 Supabase PostgreSQL Integration Guide
 
 The system uses an **Express JSON database engine** (`database.json`) as a stable local data fallback. To move into a live **Supabase cloud datastore**, run the SQL schema of `schema.sql` inside your Supabase dashboard editor:
