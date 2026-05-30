@@ -22,6 +22,7 @@ export default function App() {
   const [username, setUsername] = useState(localStorage.getItem("admin_user") || "");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [authLoading, setAuthLoading] = useState(true);
+  const [isOffline, setIsOffline] = useState(false);
 
   // Database lists
   const [medicines, setMedicines] = useState([]);
@@ -64,6 +65,7 @@ export default function App() {
         console.error("Auth verify error, falling back", err);
         // If server is starting up or disconnected, allow persistence but flag warning
         setIsAuthenticated(!!token);
+        setIsOffline(true);
       } finally {
         setAuthLoading(false);
       }
@@ -100,6 +102,10 @@ export default function App() {
       setSales(salesData);
       setStockLogs(logs);
 
+      if (window.isOfflineMode) {
+        setIsOffline(true);
+      }
+
       // Inspect low stock issues to push live notifications
       const lowStockItems = meds.filter(m => m.stock_quantity > 0 && m.stock_quantity < 15);
       if (lowStockItems.length > 0) {
@@ -124,6 +130,9 @@ export default function App() {
     setToken(newToken);
     setUsername(userVal);
     setIsAuthenticated(true);
+    if (window.isOfflineMode) {
+      setIsOffline(true);
+    }
     addToast("success", `Authenticated successfully! Welcome, ${userVal}`);
   };
 
@@ -328,6 +337,11 @@ export default function App() {
         <div className="flex items-center gap-2">
           <Activity className="w-5 h-5 text-emerald-400 animate-pulse" />
           <span className="font-bold text-sm text-white tracking-tight">Mirpur POS Hub</span>
+          {isOffline && (
+            <span className="text-[9px] bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 font-mono px-1.5 py-0.5 rounded uppercase tracking-wider">
+              Demo
+            </span>
+          )}
         </div>
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -348,7 +362,14 @@ export default function App() {
               <Activity className="w-5 h-5" />
             </div>
             <div className="text-left leading-none">
-              <span className="font-bold text-base text-white tracking-tight block">Mirpur POS</span>
+              <div className="flex items-center gap-1.5">
+                <span className="font-bold text-base text-white tracking-tight block">Mirpur POS</span>
+                {isOffline && (
+                  <span className="text-[8px] bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 font-mono px-1.5 py-0.2 rounded uppercase tracking-wider shrink-0">
+                    Demo
+                  </span>
+                )}
+              </div>
               <span className="text-[10px] text-slate-500 font-mono tracking-widest block uppercase mt-0.5">Dhaka, BD</span>
             </div>
           </div>
